@@ -6,3 +6,7 @@
     'off': !isOn,
   }"
   (click)="interrupteur()" class="lampe">lampe</div>
+
+  <div appHighlight>Test directive</div>
+  <div [in]="'lightblue'" [out]="'white'" appHighlight>Test directive</div>
+  <div [in]="'pink'" [out]="'green'" appHighlight>Test directive</div>

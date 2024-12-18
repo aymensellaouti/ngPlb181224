@@ -18,9 +18,10 @@ import { CvCardComponent } from './cv/cv-card/cv-card.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent],
+  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent, HighlightDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule, TwoComponent],
   providers: [],
   bootstrap: [AppComponent],
