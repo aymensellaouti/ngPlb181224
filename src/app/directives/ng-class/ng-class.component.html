@@ -1,0 +1,8 @@
+<p>ng-class works!</p>
+
+<div
+  [ngClass]="{
+    'on': isOn,
+    'off': !isOn,
+  }"
+  (click)="interrupteur()" class="lampe">lampe</div>
