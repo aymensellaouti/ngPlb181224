@@ -1,0 +1,15 @@
+<!-- interpolation -->
+<p>{{ name }} works!</p>
+<!-- Property binding -->
+<p [hidden]="isHidden">Je suis le second paragraphe</p>
+<!-- Event Binding -->
+<button (click)="showHide()" class="btn btn-primary">
+  show / hide
+</button>
+<input #myInput type="text" (change)="changeMessage(myInput.value)">
+
+<p>Le contenu de l'input est : {{message}}</p>
+
+<div class="alert alert-secondary">
+  <app-second/>
+</div>
