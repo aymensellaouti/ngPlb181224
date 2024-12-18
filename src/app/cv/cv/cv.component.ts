@@ -8,7 +8,6 @@ import { Cv } from '../model/cv.model';
 })
 export class CvComponent {
   selectedCv: Cv | null = null;
-
   cvs: Cv[] = [
     new Cv(
       1,
@@ -29,4 +28,7 @@ export class CvComponent {
       'rotating_card_profile.png'
     ),
   ];
+  getSelectedCv(cv: Cv) {
+    this.selectedCv = cv;
+  }
 }
