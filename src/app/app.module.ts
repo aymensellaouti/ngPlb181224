@@ -15,9 +15,11 @@ import { CvComponent } from './cv/cv/cv.component';
 import { CvListComponent } from './cv/cv-list/cv-list.component';
 import { CvItemComponent } from './cv/cv-item/cv-item.component';
 import { CvCardComponent } from './cv/cv-card/cv-card.component';
+import { NgStyleComponent } from './directives/ng-style/ng-style.component';
+import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent],
+  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, TwoComponent],
   providers: [],
   bootstrap: [AppComponent],
