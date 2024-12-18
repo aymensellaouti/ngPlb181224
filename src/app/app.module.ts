@@ -8,9 +8,10 @@ import { SecondComponent } from './components/second/second.component';
 import { ColorComponent } from './components/color/color.component';
 import { TwoComponent } from './components/two/two.component';
 import { FormsModule } from '@angular/forms';
+import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent],
+  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, TwoComponent],
   providers: [],
   bootstrap: [AppComponent],
