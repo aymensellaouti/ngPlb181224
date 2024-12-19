@@ -22,11 +22,17 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import { LoggerService } from './services/logger.service';
+import { SayHelloService } from './services/sayHello.service';
 
 @NgModule({
   declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent, HighlightDirective, RainbowDirective, BtcToUsdPipe, DefaultImagePipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule, TwoComponent],
-  providers: [],
+  providers: [
+    // J'ai ajouté à mon menu un LoggerService
+    // LoggerService,
+    // SayHelloService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
