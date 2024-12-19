@@ -27,6 +27,24 @@ export class CvComponent {
       20,
       'rotating_card_profile.png'
     ),
+    new Cv(
+      3,
+      'derbel',
+      'mohamed',
+      'Dev',
+      '1234567',
+      20,
+      'rotating_card_profile2.png'
+    ),
+    new Cv(
+      4,
+      'Parodi',
+      'Alexandre',
+      'Dev',
+      '1234567',
+      20,
+      'rotating_card_profile3.png'
+    ),
   ];
   getSelectedCv(cv: Cv) {
     this.selectedCv = cv;
