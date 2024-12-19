@@ -24,9 +24,10 @@ import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 import { LoggerService } from './services/logger.service';
 import { SayHelloService } from './services/sayHello.service';
+import { TodoComponent } from './todo/todo/todo.component';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent, HighlightDirective, RainbowDirective, BtcToUsdPipe, DefaultImagePipe],
+  declarations: [AppComponent, FirstComponent, SecondComponent, TodoComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent, HighlightDirective, RainbowDirective, BtcToUsdPipe, DefaultImagePipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule, TwoComponent],
   providers: [
     // J'ai ajouté à mon menu un LoggerService
