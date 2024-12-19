@@ -1,0 +1,7 @@
+<form #myForm="ngForm">
+  <input required type="text" class="form-control" ngModel name="name">
+  <input required type="text" class="form-control" ngModel name="age">
+  <button [disabled]="myForm.invalid" (click)="process(myForm)" class="btn btn-danger">
+    process
+  </button>
+</form>
