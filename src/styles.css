@@ -3,3 +3,4 @@
 @import '~bootstrap-icons';
 @import 'assets/css/rotating-card.css';
 @import 'assets/css/pe-icon-7-stroke.css';
+@import 'ngx-toastr/toastr';

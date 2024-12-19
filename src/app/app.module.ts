@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { ToastrModule } from 'ngx-toastr';
+
 import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { ColorComponent } from './components/color/color.component';
 import { TwoComponent } from './components/two/two.component';
-import { FormsModule } from '@angular/forms';
 import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
 import { PereComponent } from './communicationInterComposants/pere/pere.component';
 import { FilsComponent } from './communicationInterComposants/fils/fils.component';
@@ -22,13 +26,43 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
-import { LoggerService } from './services/logger.service';
-import { SayHelloService } from './services/sayHello.service';
 import { TodoComponent } from './todo/todo/todo.component';
+import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, SecondComponent, TodoComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent, HighlightDirective, RainbowDirective, BtcToUsdPipe, DefaultImagePipe],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, TwoComponent],
+  declarations: [
+    AppComponent,
+    FirstComponent,
+    SecondComponent,
+    TodoComponent,
+    WeekTodoComponent,
+    ColorComponent,
+    RotatingCardComponent,
+    PereComponent,
+    FilsComponent,
+    CvComponent,
+    CvListComponent,
+    CvItemComponent,
+    CvCardComponent,
+    NgStyleComponent,
+    MiniWordComponent,
+    NgClassComponent,
+    HighlightDirective,
+    RainbowDirective,
+    BtcToUsdPipe,
+    DefaultImagePipe,
+    EmbaucheComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    TwoComponent,
+
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+  ],
   providers: [
     // J'ai ajouté à mon menu un LoggerService
     // LoggerService,
