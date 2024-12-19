@@ -21,9 +21,10 @@ import { NgClassComponent } from './directives/ng-class/ng-class.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
+import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 
 @NgModule({
-  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent, HighlightDirective, RainbowDirective, BtcToUsdPipe],
+  declarations: [AppComponent, FirstComponent, SecondComponent, ColorComponent, RotatingCardComponent, PereComponent, FilsComponent, CvComponent, CvListComponent, CvItemComponent, CvCardComponent, NgStyleComponent, MiniWordComponent, NgClassComponent, HighlightDirective, RainbowDirective, BtcToUsdPipe, DefaultImagePipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule, TwoComponent],
   providers: [],
   bootstrap: [AppComponent],

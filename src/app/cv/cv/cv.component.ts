@@ -17,7 +17,7 @@ export class CvComponent {
       'teacher',
       '123456',
       42,
-      'rotating_card_profile3.png'
+      ''
     ),
     new Cv(
       2,
@@ -35,7 +35,7 @@ export class CvComponent {
       'Dev',
       '1234567',
       20,
-      'rotating_card_profile2.png'
+      '             '
     ),
     new Cv(
       4,
