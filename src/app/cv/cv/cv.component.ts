@@ -4,6 +4,7 @@ import { LoggerService } from 'src/app/services/logger.service';
 import { SayHelloService } from 'src/app/services/sayHello.service';
 import { TodoService } from 'src/app/todo/service/todo.service';
 import { ToastrService } from 'ngx-toastr';
+import { CvService } from '../services/cv.service';
 
 @Component({
   selector: 'app-cv',
@@ -13,28 +14,8 @@ import { ToastrService } from 'ngx-toastr';
 export class CvComponent {
   today = new Date();
   selectedCv: Cv | null = null;
-  cvs: Cv[] = [
-    new Cv(1, 'sellaouti', 'aymen', 'teacher', '123456', 42, ''),
-    new Cv(
-      2,
-      'sahli',
-      'faten',
-      'Dev',
-      '1234567',
-      20,
-      'rotating_card_profile.png'
-    ),
-    new Cv(3, 'derbel', 'mohamed', 'Dev', '1234567', 20, '             '),
-    new Cv(
-      4,
-      'Parodi',
-      'Alexandre',
-      'Dev',
-      '1234567',
-      20,
-      'rotating_card_profile3.png'
-    ),
-  ];
+  cvService = inject(CvService);
+  cvs: Cv[] = this.cvService.getCvs();
   logger = inject(LoggerService);
   sayHelloService = inject(SayHelloService);
   todoService = inject(TodoService);

@@ -6,15 +6,35 @@ import { Cv } from '../model/cv.model';
   providedIn: 'root',
 })
 export class CvService {
-  private cvs = [];
-
+  private cvs: Cv[] = [
+    new Cv(1, 'sellaouti', 'aymen', 'teacher', '123456', 42, ''),
+    new Cv(
+      2,
+      'sahli',
+      'faten',
+      'Dev',
+      '1234567',
+      20,
+      'rotating_card_profile.png'
+    ),
+    new Cv(3, 'derbel', 'mohamed', 'Dev', '1234567', 20, '             '),
+    new Cv(
+      4,
+      'Parodi',
+      'Alexandre',
+      'Dev',
+      '1234567',
+      20,
+      'rotating_card_profile3.png'
+    ),
+  ];
 
   /**
    * Retourne la liste des cvs
    * @returns Cv[]
    */
   getCvs(): Cv[] {
-    return [];
+    return this.cvs;
   }
 
   /**

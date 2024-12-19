@@ -18,6 +18,10 @@ export class EmbaucheService {
    * @returns {boolean} return true si embauchée false sinon
    */
   embaucher(cv: Cv): boolean {
-    return false;
+    if (this.embauchees.includes(cv)) {
+      return false;
+    }
+    this.embauchees.push(cv);
+    return true;
   }
 }
