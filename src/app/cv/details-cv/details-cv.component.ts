@@ -5,7 +5,7 @@ import { CvService } from "../services/cv.service";
 import { APP_ROUTES } from "src/app/config/app-routes.config";
 import { AuthService } from "src/app/auth/services/auth.service";
 import { DefaultImagePipe } from "../pipes/default-image.pipe";
-import { NgIf } from "@angular/common";
+
 
 
 @Component({
@@ -13,7 +13,7 @@ import { NgIf } from "@angular/common";
     templateUrl: './details-cv.component.html',
     styleUrls: ['./details-cv.component.css'],
     standalone: true,
-    imports: [NgIf, DefaultImagePipe],
+    imports: [DefaultImagePipe],
 })
 export class DetailsCvComponent {
   cv: Cv | null = null;

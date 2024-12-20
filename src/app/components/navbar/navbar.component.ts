@@ -3,7 +3,7 @@ import { Router, RouterLinkActive, RouterLink } from '@angular/router';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { APP_ROUTES } from 'src/app/config/app-routes.config';
-import { NgIf } from '@angular/common';
+
 
 @Component({
     selector: 'app-navbar',
@@ -11,11 +11,10 @@ import { NgIf } from '@angular/common';
     styleUrls: ['./navbar.component.css'],
     standalone: true,
     imports: [
-        RouterLinkActive,
-        RouterLink,
-        NgIf,
-        TranslatePipe,
-    ],
+    RouterLinkActive,
+    RouterLink,
+    TranslatePipe
+],
 })
 export class NavbarComponent {
   authService = inject(AuthService);

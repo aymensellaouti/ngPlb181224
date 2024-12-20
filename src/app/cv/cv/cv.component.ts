@@ -10,7 +10,7 @@ import { BtcToUsdPipe } from '../../pipes/btc-to-usd.pipe';
 import { EmbaucheComponent } from '../embauche/embauche.component';
 import { CvCardComponent } from '../cv-card/cv-card.component';
 import { CvListComponent } from '../cv-list/cv-list.component';
-import { NgIf, AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe } from '@angular/common';
+import { AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe } from '@angular/common';
 
 @Component({
     selector: 'app-cv',
@@ -18,16 +18,15 @@ import { NgIf, AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe } from '@angular
     styleUrls: ['./cv.component.css'],
     standalone: true,
     imports: [
-        NgIf,
-        CvListComponent,
-        CvCardComponent,
-        EmbaucheComponent,
-        AsyncPipe,
-        UpperCasePipe,
-        CurrencyPipe,
-        DatePipe,
-        BtcToUsdPipe,
-    ],
+    CvListComponent,
+    CvCardComponent,
+    EmbaucheComponent,
+    AsyncPipe,
+    UpperCasePipe,
+    CurrencyPipe,
+    DatePipe,
+    BtcToUsdPipe
+],
 })
 export class CvComponent {
   today = new Date();
