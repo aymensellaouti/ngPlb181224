@@ -2,11 +2,20 @@ import { Component, inject, Input } from '@angular/core';
 import { Cv } from '../model/cv.model';
 import { EmbaucheService } from '../services/embauche.service';
 import { ToastrService } from 'ngx-toastr';
+import { DefaultImagePipe } from '../pipes/default-image.pipe';
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-cv-card',
-  templateUrl: './cv-card.component.html',
-  styleUrls: ['./cv-card.component.css'],
+    selector: 'app-cv-card',
+    templateUrl: './cv-card.component.html',
+    styleUrls: ['./cv-card.component.css'],
+    standalone: true,
+    imports: [
+        NgIf,
+        RouterLink,
+        DefaultImagePipe,
+    ],
 })
 export class CvCardComponent {
   @Input()

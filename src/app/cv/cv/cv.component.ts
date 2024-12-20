@@ -6,11 +6,28 @@ import { TodoService } from 'src/app/todo/service/todo.service';
 import { ToastrService } from 'ngx-toastr';
 import { CvService } from '../services/cv.service';
 import { catchError, Observable, of } from 'rxjs';
+import { BtcToUsdPipe } from '../../pipes/btc-to-usd.pipe';
+import { EmbaucheComponent } from '../embauche/embauche.component';
+import { CvCardComponent } from '../cv-card/cv-card.component';
+import { CvListComponent } from '../cv-list/cv-list.component';
+import { NgIf, AsyncPipe, UpperCasePipe, CurrencyPipe, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-cv',
-  templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.css'],
+    selector: 'app-cv',
+    templateUrl: './cv.component.html',
+    styleUrls: ['./cv.component.css'],
+    standalone: true,
+    imports: [
+        NgIf,
+        CvListComponent,
+        CvCardComponent,
+        EmbaucheComponent,
+        AsyncPipe,
+        UpperCasePipe,
+        CurrencyPipe,
+        DatePipe,
+        BtcToUsdPipe,
+    ],
 })
 export class CvComponent {
   today = new Date();

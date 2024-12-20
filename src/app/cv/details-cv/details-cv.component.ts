@@ -4,12 +4,16 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { CvService } from "../services/cv.service";
 import { APP_ROUTES } from "src/app/config/app-routes.config";
 import { AuthService } from "src/app/auth/services/auth.service";
+import { DefaultImagePipe } from "../pipes/default-image.pipe";
+import { NgIf } from "@angular/common";
 
 
 @Component({
-  selector: 'app-details-cv',
-  templateUrl: './details-cv.component.html',
-  styleUrls: ['./details-cv.component.css'],
+    selector: 'app-details-cv',
+    templateUrl: './details-cv.component.html',
+    styleUrls: ['./details-cv.component.css'],
+    standalone: true,
+    imports: [NgIf, DefaultImagePipe],
 })
 export class DetailsCvComponent {
   cv: Cv | null = null;

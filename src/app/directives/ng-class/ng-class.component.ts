@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
+import { RainbowDirective } from '../rainbow.directive';
+import { HighlightDirective } from '../highlight.directive';
+import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-ng-class',
-  templateUrl: './ng-class.component.html',
-  styleUrls: ['./ng-class.component.css'],
+    selector: 'app-ng-class',
+    templateUrl: './ng-class.component.html',
+    styleUrls: ['./ng-class.component.css'],
+    standalone: true,
+    imports: [
+        NgClass,
+        HighlightDirective,
+        RainbowDirective,
+    ],
 })
 export class NgClassComponent {
   /**

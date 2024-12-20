@@ -2,11 +2,12 @@ import { Component, inject, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-second',
-  template: `
+    selector: 'app-second',
+    template: `
     <p>Je suis le second component : {{ message }}</p>
   `,
-  styles: [``]
+    styles: [``],
+    standalone: true
 })
 export class SecondComponent {
 
