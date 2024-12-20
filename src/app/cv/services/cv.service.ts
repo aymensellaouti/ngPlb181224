@@ -1,11 +1,16 @@
 import {  Injectable } from '@angular/core';
 import { Cv } from '../model/cv.model';
+import { Subject } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class CvService {
+  // cv1 cv2 cv3 cv4 cv1 cv2 cv5 cv3 cv4 cv5 cv1
+  // subject = observable (subscribe) + observateur (next, complete, error)
+  private selectCvSubject$ = new Subject<Cv>();
+  selectCv$ = this.selectCvSubject$.asObservable();
   private cvs: Cv[] = [
     new Cv(1, 'sellaouti', 'aymen', 'teacher', '123456', 42, ''),
     new Cv(
@@ -62,5 +67,9 @@ export class CvService {
        return true;
      }
      return false;
+  }
+
+  selectCv(cv: Cv): void {
+    this.selectCvSubject$.next(cv);
   }
 }

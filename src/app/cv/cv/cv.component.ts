@@ -26,8 +26,14 @@ export class CvComponent {
     this.sayHelloService.hello();
     this.toastr.info('Bienvenu dans notre CvTech');
     this.logger.log('cc je suis le cvComponent');
+    /**
+     * Je suis intéressé par le flux des cvs sélectionnés
+     */
+    this.cvService.selectCv$.subscribe({
+      next: cv => this.selectedCv = cv
+    });
   }
-  getSelectedCv(cv: Cv) {
-    this.selectedCv = cv;
-  }
+  // getSelectedCv(cv: Cv) {
+  //   this.selectedCv = cv;
+  // }
 }
