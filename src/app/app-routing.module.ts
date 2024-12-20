@@ -11,6 +11,7 @@ import { APP_ROUTES } from './config/app-routes.config';
 import { NF404Component } from './components/nf404/nf404.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { canLeaveGuard } from './guards/can-leave.guard';
 // cv/add
 const routes: Routes = [
   { path: '', component: FirstComponent },
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: `${APP_ROUTES.cv}/add`, component: AddCvComponent },
   { path: `${APP_ROUTES.cv}/:id`, component: DetailsCvComponent },
   { path: APP_ROUTES.login, component: LoginComponent },
-  { path: 'todo', component: TodoComponent },
+  { path: 'todo', component: TodoComponent, canDeactivate: [canLeaveGuard] },
   { path: 'word', component: MiniWordComponent },
   { path: 'color', component: ColorComponent },
   { path: 'second/:name/:age', component: SecondComponent },

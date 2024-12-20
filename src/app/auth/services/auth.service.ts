@@ -19,11 +19,23 @@ export class AuthService {
     );
   }
 
+  logout() {
+    this.removeToken();
+  }
+
+  isAuthenticated(): boolean {
+    return !!this.getToken();
+  }
+
   getToken(): string {
     return localStorage.getItem(APP_CONSTANTS.token) ?? '';
   }
 
   setToken(token: string): void {
     localStorage.setItem(APP_CONSTANTS.token, token);
+  }
+
+  removeToken(): void {
+    localStorage.removeItem(APP_CONSTANTS.token);
   }
 }

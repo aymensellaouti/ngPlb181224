@@ -3,6 +3,7 @@ import { Cv } from "../model/cv.model";
 import { ActivatedRoute, Router } from "@angular/router";
 import { CvService } from "../services/cv.service";
 import { APP_ROUTES } from "src/app/config/app-routes.config";
+import { AuthService } from "src/app/auth/services/auth.service";
 
 
 @Component({
@@ -15,6 +16,7 @@ export class DetailsCvComponent {
   acr = inject(ActivatedRoute);
   cvService = inject(CvService);
   router = inject(Router);
+  authService = inject(AuthService);
   id = this.acr.snapshot.params['id'];
 
   constructor() {
@@ -23,7 +25,7 @@ export class DetailsCvComponent {
       error: (err) => {
         console.log(err);
         this.router.navigate([APP_ROUTES.cv]);
-      }
+      },
     });
   }
   deleteCv() {
@@ -32,7 +34,7 @@ export class DetailsCvComponent {
         next: () => this.router.navigate([APP_ROUTES.cv]),
         error: (e) => {
           console.log(e);
-        }
+        },
       });
     }
   }

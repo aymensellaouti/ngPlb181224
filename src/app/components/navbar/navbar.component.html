@@ -9,12 +9,13 @@
         <a class="nav-link" [routerLink]="['']" routerLinkActive="active text-primary" [routerLinkActiveOptions]="{exact: true}">Home</a>
         <a class="nav-link" [routerLink]="['cv']" routerLinkActive="active text-primary" [routerLinkActiveOptions]="{exact: true}">Cv</a>
         <!-- Ce lien ne doit s'affucher que si on est connecté -->
-        <a class="nav-link" [routerLink]="['cv','add']" routerLinkActive="active text-primary">Add Cv</a>
+        <a class="nav-link" *ngIf="authService.isAuthenticated()" [routerLink]="['cv','add']" routerLinkActive="active text-primary">Add Cv</a>
         <a class="nav-link" [routerLink]="['todo']" routerLinkActive="active text-primary">Todo</a>
         <a class="nav-link" [routerLink]="['word']" routerLinkActive="active text-primary">Mini Word</a>
         <a class="nav-link" [routerLink]="['color']" routerLinkActive="active text-primary">Color</a>
       <!-- Todo : Ajouter le lien pour le logout et il faut afficher le logout quand est connecté et le login inversement -->
-        <a class="nav-link" [routerLink]="['login']" routerLinkActive="active text-primary">Login</a>
+        <a *ngIf="!authService.isAuthenticated()" class="nav-link" [routerLink]="['login']" routerLinkActive="active text-primary">Login</a>
+        <a *ngIf="authService.isAuthenticated()" class="nav-link" (click)="logout()">Logout</a>
       </div>
     </div>
   </div>

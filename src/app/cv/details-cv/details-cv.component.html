@@ -36,6 +36,7 @@
             <div class="d-flex justify-content-center">
               <!-- Ce Boutton ne doit s'affucher que si on est connecté -->
               <button
+                *ngIf="authService.isAuthenticated()"
                 (click)="deleteCv()"
                 class="btn btn-danger">
                 Delete
