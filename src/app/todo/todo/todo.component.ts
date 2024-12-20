@@ -24,6 +24,10 @@ export class TodoComponent {
 
   constructor() {
     this.todos = this.todoService.getTodos();
+    this.todoService.getTodosFromApi().subscribe({
+      next: (todos) => console.log(todos),
+      error: (e) => console.log(e)
+    })
   }
 
   /**
