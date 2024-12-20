@@ -37,6 +37,7 @@ import { TestFormComponent } from './exempleForm/test-form/test-form.component';
 import { LoginComponent } from './auth/login/login.component';
 import { TestObservableComponent } from './rxjs/test-observable/test-observable.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { authInterceptorProvider } from './auth/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,7 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     TestFormComponent,
     LoginComponent,
     TestObservableComponent,
-    AddCvComponent
+    AddCvComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,6 +83,7 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
     // J'ai ajouté à mon menu un LoggerService
     // LoggerService,
     // SayHelloService
+    authInterceptorProvider,
   ],
   bootstrap: [AppComponent],
 })

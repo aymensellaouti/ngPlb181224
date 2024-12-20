@@ -56,13 +56,7 @@ export class CvService {
   }
 
   deleteCvById(id: number): Observable<{ count: number }> {
-    // Todo !!!!!!! A voir y a trop de code qui se répéte
-    const token = this.authService.getToken();
-    //const params = new HttpParams().set('access_token', token);
-    const headers = new HttpHeaders().set('Authorization', token);
-    return this.http.delete<{ count: number }>(APP_API.cv + id, {
-      headers
-    });
+       return this.http.delete<{ count: number }>(APP_API.cv + id);
   }
 
   /**
