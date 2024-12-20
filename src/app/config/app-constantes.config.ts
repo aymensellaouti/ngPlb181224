@@ -1,3 +1,4 @@
 export const APP_CONSTANTS = {
-  defaultImage: 'cv.png'
+  defaultImage: 'cv.png',
+  token: 'token',
 }

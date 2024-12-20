@@ -3,7 +3,10 @@
     <div class="alert alert-warning">
       {{ today | date: 'full' | uppercase}} - {{ 1 | btcToUsd | currency: 'USD' }} - {{ 1 | btcToUsd:false}}
     </div>
-    <app-cv-list [cvs]="cvs" /></div>
+    <ng-container *ngIf="cvs$ | async as cvs">
+      <app-cv-list [cvs]="cvs" />
+    </ng-container>
+  </div>
   <div class="col"><app-cv-card [cv]="selectedCv" /></div>
 </div>
 <app-embauche />
